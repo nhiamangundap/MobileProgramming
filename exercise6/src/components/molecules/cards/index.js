@@ -1,64 +1,32 @@
-import React from 'react'
-import { StyleSheet, Text, View, Image } from 'react-native'
-import UserList from '../../pages/User_List'
+import React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 
-const Card = ({name, username, email, address, phone}) => {
-    return (
-        <View>
-            <View style={styles.card}>
-                <Text style={styles.name}>{name}</Text>
-                <Text style={styles.userName}>{username}</Text>
-                <Text style={styles.email}>{email}</Text>
-                <Text style={styles.address}>{address}</Text>
-                <Text style={styles.phone}>{phone}</Text>
-                
-            </View>
-        </View>
-    )
-}
-
-export default Card
+const Cards = ({firstName, email, lastName}) => {
+  return (
+    <View style={styles.card}>
+      <Text style={styles.name}>{firstName}</Text>
+      <Text email={styles.email}>{email}</Text>
+      <Text lastName={styles.name}>{lastName}</Text>
+    </View>
+  );
+};
+export default Cards;
 
 const styles = StyleSheet.create({
-    card: {
-        marginTop: 15,
-        alignItems: 'center',
-    },
-    name:{
-        fontSize: 14,
-        fontWeight: '700',
-        lineHeight: 16,
-        marginLeft: 26,
-        marginTop: 13,
-        marginBottom: 5,
-    },
-    userName:{
-        fontSize: 14,
-        fontWeight: '700',
-        lineHeight: 16,
-        marginLeft: 26,
-        marginBottom: 5,
-    },
-
-    email: {
-        fontSize: 14,
-        fontWeight: '700',
-        lineHeight: 16,
-        marginLeft: 26,
-        marginBottom: 5,
-    },
-    address: {
-        fontSize: 14,
-        fontWeight: '700',
-        lineHeight: 16,
-        marginLeft: 26,
-        marginBottom: 5,
-    },
-    phone: {
-        fontSize: 14,
-        fontWeight: '700',
-        lineHeight: 16,
-        marginLeft: 26,
-        marginBottom: 5,
-    },
-})
+  card: {
+    marginTop: 15,
+    marginHorizontal: 30,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderRadius: 5,
+    borderColor: 'orange',
+  },
+  name: {
+    fontSize: 18,
+    fontWeight: '700',
+  },
+  email: {
+    fontSize: 16,
+    color: 'grey',
+  },
+});
